@@ -8,18 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
 
+    var people = [Person]()
+    
+    @IBOutlet var tableView : UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        people.append(Person(firstName: "John", lastName: "Clem"))
+        people.append(Person(firstName: "Andrew", lastName: "Bishop"))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return people.count;
     }
-
-
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        var personForRow = people[indexPath.row]
+        
+        cell.textLabel?.text = personForRow.fullName()
+        
+        return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+ 
+        if let destinationVC = segue.destinationViewController as? PersonDetailViewController {
+            var personForRow = people[tableView.indexPathForSelectedRow()!.row]
+            destinationVC.person = personForRow
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
 }
-

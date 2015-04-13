@@ -13,6 +13,8 @@
 		F17714F11AD98C3C001A0E55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17714F01AD98C3C001A0E55 /* Images.xcassets */; };
 		F17714F41AD98C3C001A0E55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17714F21AD98C3C001A0E55 /* LaunchScreen.xib */; };
 		F17715001AD98C3C001A0E55 /* Class_RosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17714FF1AD98C3C001A0E55 /* Class_RosterTests.swift */; };
+		F177150A1AD9B7A4001A0E55 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17715091AD9B7A4001A0E55 /* Person.swift */; };
+		F177150C1AD9C20B001A0E55 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F177150B1AD9C20B001A0E55 /* PersonDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F17714F91AD98C3C001A0E55 /* Class RosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Class RosterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17714FE1AD98C3C001A0E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F17714FF1AD98C3C001A0E55 /* Class_RosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class_RosterTests.swift; sourceTree = "<group>"; };
+		F17715091AD9B7A4001A0E55 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F177150B1AD9C20B001A0E55 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				F17714E91AD98C3C001A0E55 /* AppDelegate.swift */,
 				F17714EB1AD98C3C001A0E55 /* ViewController.swift */,
 				F17714ED1AD98C3C001A0E55 /* Main.storyboard */,
+				F177150B1AD9C20B001A0E55 /* PersonDetailViewController.swift */,
+				F17715091AD9B7A4001A0E55 /* Person.swift */,
 				F17714F01AD98C3C001A0E55 /* Images.xcassets */,
 				F17714F21AD98C3C001A0E55 /* LaunchScreen.xib */,
 				F17714E71AD98C3C001A0E55 /* Supporting Files */,
@@ -212,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F177150C1AD9C20B001A0E55 /* PersonDetailViewController.swift in Sources */,
+				F177150A1AD9B7A4001A0E55 /* Person.swift in Sources */,
 				F17714EC1AD98C3C001A0E55 /* ViewController.swift in Sources */,
 				F17714EA1AD98C3C001A0E55 /* AppDelegate.swift in Sources */,
 			);
